@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ParcialMoviles2021</string>
+
+    <string name="text_view_text">Agregar película</string>
+    <string name="placeholder_movie">Película</string>
+    <string name="placeholder_description">Descripcion</string>
+</resources>

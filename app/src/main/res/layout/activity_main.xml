@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar película"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="32dp"/>
+
+
+    <EditText
+        android:id="@+id/movie_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/placeholder_movie"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true" />
+
+    <EditText
+        android:id="@+id/description_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/placeholder_description"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true" />
+
+    <ToggleButton
+        android:id="@+id/movie_seen_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="ToggleButton"
+        android:textOff="Por ver"
+        android:textOn="Vista"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/save_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Guardar" />
+        <Button
+            android:id="@+id/list_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Ver películas" />
+    </LinearLayout>
+
+</LinearLayout>
