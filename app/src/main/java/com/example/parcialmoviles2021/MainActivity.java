@@ -2,17 +2,21 @@ package com.example.parcialmoviles2021;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText movie, description;
     ToggleButton seen;
     Button save, list;
+    DataBaseManager dbManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,5 +34,20 @@ public class MainActivity extends AppCompatActivity {
         save = (Button) findViewById(R.id.save_id);
 
         list = (Button) findViewById(R.id.list_id);
+
+        dbManager = new DataBaseManager(this);
+    }
+
+    public void saveMovie(android.view.View v) {
+        Movie newMovie = new Movie();
+        newMovie.setName(movie.getText().toString());
+        newMovie.setDescription(description.getText().toString());
+        dbManager.addMovie(newMovie);
+    }
+
+    public void listMovies(android.view.View v) {
+        List<Movie> movies = dbManager.getAllMovies();
+        Intent moviesIntent  = new Intent(getApplicationContext(), MovieList.class);
+        startActivity(moviesIntent);
     }
 }
